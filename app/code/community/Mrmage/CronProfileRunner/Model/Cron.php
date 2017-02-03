@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * Class Mrmage_CronProfileRunner_Model_Cron
+ */
 class Mrmage_CronProfileRunner_Model_Cron
 {
     public function runProfiles()

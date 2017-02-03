@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * Class Mrmage_CronProfileRunner_Model_Profile
+ */
 class Mrmage_CronProfileRunner_Model_Profile extends Mage_Core_Model_Abstract
 {
     const STATUS_PROFILE_STOPPED = 0;

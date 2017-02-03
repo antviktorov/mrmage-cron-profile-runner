@@ -1,4 +1,7 @@
 <?php
+/**
+ * Class Mrmage_CronProfileRunner_Helper_Dataflow
+ */
 class Mrmage_CronProfileRunner_Helper_Dataflow extends Mage_Core_Helper_Abstract
 {
     public function run($profileId)

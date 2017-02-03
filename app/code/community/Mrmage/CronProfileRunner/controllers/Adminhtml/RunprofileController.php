@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * Class Mrmage_CronProfileRunner_Adminhtml_RunprofileController
+ */
 class Mrmage_CronProfileRunner_Adminhtml_RunprofileController extends Mage_Adminhtml_Controller_Action
 {
     /**
