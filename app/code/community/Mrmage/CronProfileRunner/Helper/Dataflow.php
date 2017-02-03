@@ -22,7 +22,7 @@ class Mrmage_CronProfileRunner_Helper_Dataflow extends Mage_Core_Helper_Abstract
             throw new Exception('Invalid profile id. Profile does not exists');
         }
 
-        Mage::register('current_convert_profile', $profile);
+        //Mage::register('current_convert_profile', $profile);
 
         $profile->run();
 
