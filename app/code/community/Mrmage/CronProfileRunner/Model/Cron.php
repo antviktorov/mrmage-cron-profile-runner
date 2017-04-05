@@ -12,6 +12,14 @@ class Mrmage_CronProfileRunner_Model_Cron
 
         foreach ($profiles as $profile) {
             try {
+                if ($profile->getFile()) {
+                    Mage::app()->getRequest()->setParam('files', $profile->getFile());
+                } else {
+                    Mage::app()->getRequest()->setParam('files', null);
+                }
+
+                $profile->setStatus(Mrmage_CronProfileRunner_Model_Profile::STATUS_PROFILE_RUNNING);
+                $profile->save();
                 Mage::helper('mrmage_cronprofilerunner/dataflow')->run($profile->getProfileId());
                 $profile->setStatus(Mrmage_CronProfileRunner_Model_Profile::STATUS_PROFILE_STOPPED);
             } catch (Exception $e) {
