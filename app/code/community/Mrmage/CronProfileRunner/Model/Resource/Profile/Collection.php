@@ -7,7 +7,6 @@ class Mrmage_CronProfileRunner_Model_Resource_Profile_Collection extends Mage_Co
 {
     /**
      * Init model
-     *
      */
     protected function _construct()
     {

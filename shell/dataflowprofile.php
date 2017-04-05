@@ -45,7 +45,7 @@ class Mage_Shell_Dataflowprofile extends Mage_Shell_Abstract
      */
     protected function _runProfile($id)
     {
-        return Mage::helper('mrmage_cronprofilerunner/dataflow')->run($id);
+        return Mage::helper('mrmage_cronprofilerunner/dataflow')->run($id, true);
     }
 }
 

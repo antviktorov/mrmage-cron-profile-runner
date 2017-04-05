@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Mrmage_CronProfileRunner>
-            <version>1.0.1</version>
+            <version>1.0.4</version>
         </Mrmage_CronProfileRunner>
     </modules>
     <global>
@@ -13,6 +13,7 @@
             <adminhtml>
                 <rewrite>
                     <system_convert_gui_grid>Mrmage_CronProfileRunner_Block_Rewrite_Adminhtml_System_Convert_Gui_Grid</system_convert_gui_grid>
+                    <system_convert_profile_edit_tab_history>Mrmage_CronProfileRunner_Block_Rewrite_Adminhtml_System_Convert_Profile_Edit_Tab_History</system_convert_profile_edit_tab_history>
                 </rewrite>
             </adminhtml>
         </blocks>
@@ -27,8 +28,17 @@
                     <profile>
                         <table>mrmage_cronprofilerunner</table>
                     </profile>
+                    <log>
+                        <table>mrmage_cronprofilerunner_log</table>
+                    </log>
                 </entities>
             </mrmage_cronprofilerunner_resource>
+            <dataflow>
+                <rewrite>
+                    <convert_parser_csv>Mrmage_CronProfileRunner_Model_Rewrite_Dataflow_Convert_Parser_Csv</convert_parser_csv>
+                    <convert_parser_xml_excel>Mrmage_CronProfileRunner_Model_Rewrite_Dataflow_Convert_Parser_Xml_Excel</convert_parser_xml_excel>
+                </rewrite>
+            </dataflow>
         </models>
         <resources>
             <mrmage_cronprofilerunner_setup>
