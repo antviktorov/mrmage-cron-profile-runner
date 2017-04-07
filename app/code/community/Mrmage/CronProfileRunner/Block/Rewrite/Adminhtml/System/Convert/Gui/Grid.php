@@ -34,7 +34,8 @@ class Mrmage_CronProfileRunner_Block_Rewrite_Adminhtml_System_Convert_Gui_Grid
 
         $this->removeColumn('action');
 
-        $this->addColumn('action', array(
+        $this->addColumn(
+            'action', array(
             'header'    => Mage::helper('adminhtml')->__('Action'),
             'width'     => '60px',
             'align'     => 'center',
@@ -51,9 +52,11 @@ class Mrmage_CronProfileRunner_Block_Rewrite_Adminhtml_System_Convert_Gui_Grid
                     'caption'   => Mage::helper('adminhtml')->__('Run')
                 ),
             )
-        ));
+            )
+        );
 
-        $this->addColumn('status', array(
+        $this->addColumn(
+            'status', array(
             'header'    => Mage::helper('index')->__('Running Status'),
             'sortable'  => false,
             'width'     => '120',
@@ -62,7 +65,8 @@ class Mrmage_CronProfileRunner_Block_Rewrite_Adminhtml_System_Convert_Gui_Grid
             'type'      => 'options',
             'options'   => Mrmage_CronProfileRunner_Model_Profile::getStatuses(),
             'frame_callback' => array($this, 'decorateStatus')
-        ));
+            )
+        );
 
         return $this;
     }
@@ -98,6 +102,7 @@ class Mrmage_CronProfileRunner_Block_Rewrite_Adminhtml_System_Convert_Gui_Grid
                 $class = 'grid-severity-notice';
                 $text  = $this->helper('mrmage_cronprofilerunner')->__('Stopped');
         }
+
         return '<span class="'.$class.'"><span>'.$text.'</span></span>';
     }
 }

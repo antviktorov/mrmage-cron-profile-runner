@@ -30,6 +30,7 @@ class Mrmage_CronProfileRunner_Model_Profile extends Mage_Core_Model_Abstract
         if ($this->getStatus() == self::STATUS_PROFILE_RUNNING) {
             return true;
         }
+
         return false;
     }
 }

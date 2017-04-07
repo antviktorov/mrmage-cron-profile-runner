@@ -18,6 +18,7 @@ class Mrmage_CronProfileRunner_Adminhtml_RunprofileController extends Mage_Admin
                     if (!$profile->getId()) {
                         throw new Exception(Mage::helper('mrmage_cronprofilerunner')->__('Provided profile is wrong.'));
                     }
+
                     $cronProfile->setProfileId($profile->getId());
                 } else if ($cronProfile->isRunning()) {
                     throw new Exception(
@@ -29,7 +30,7 @@ class Mrmage_CronProfileRunner_Adminhtml_RunprofileController extends Mage_Admin
 
                 $cronProfile->setStatus(Mrmage_CronProfileRunner_Model_Profile::STATUS_PROFILE_PENDING);
                 $cronProfile->save();
-             } else {
+            } else {
                 throw new Exception(Mage::helper('adminhtml')->__('Profile id isn\'t provided.'));
             }
         } catch (Exception $e) {

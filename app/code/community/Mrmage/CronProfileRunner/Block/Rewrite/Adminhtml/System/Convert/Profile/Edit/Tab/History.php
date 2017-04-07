@@ -24,28 +24,36 @@ class Mrmage_CronProfileRunner_Block_Rewrite_Adminhtml_System_Convert_Profile_Ed
 
     protected function _prepareColumns()
     {
-        $this->addColumn('run_time', array(
+        $this->addColumn(
+            'run_time', array(
             'header'    => Mage::helper('adminhtml')->__('Performed At'),
             'type'      => 'datetime',
             'index'     => 'run_time',
             'width'     => '150px',
-        ));
+            )
+        );
 
-        $this->addColumn('batch_id', array(
+        $this->addColumn(
+            'batch_id', array(
             'header'    => Mage::helper('adminhtml')->__('Batch Id'),
             'index'     => 'batch_id',
             'width'     => '50px',
-        ));
+            )
+        );
 
-        $this->addColumn('message', array(
+        $this->addColumn(
+            'message', array(
             'header'    => Mage::helper('adminhtml')->__('Message'),
             'index'     => 'message',
-        ));
+            )
+        );
 
-        $this->addColumn('level', array(
+        $this->addColumn(
+            'level', array(
             'header'    => Mage::helper('adminhtml')->__('Error level'),
             'index'     => 'level',
-        ));
+            )
+        );
 
         return parent::_prepareColumns();
     }
