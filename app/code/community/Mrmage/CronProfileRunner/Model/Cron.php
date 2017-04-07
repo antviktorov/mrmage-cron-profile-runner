@@ -2,9 +2,14 @@
 
 /**
  * Class Mrmage_CronProfileRunner_Model_Cron
+ * @author MrMage team <support@mrmage.com>
  */
 class Mrmage_CronProfileRunner_Model_Cron
 {
+    /**
+     * Run profiles by cron
+     * @throws Exception
+     */
     public function runProfiles()
     {
         $profiles = Mage::getModel('mrmage_cronprofilerunner/profile')->getCollection()

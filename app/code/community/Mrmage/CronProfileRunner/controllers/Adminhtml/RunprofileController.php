@@ -2,6 +2,7 @@
 
 /**
  * Class Mrmage_CronProfileRunner_Adminhtml_RunprofileController
+ * @author MrMage team <support@mrmage.com>
  */
 class Mrmage_CronProfileRunner_Adminhtml_RunprofileController extends Mage_Adminhtml_Controller_Action
 {

@@ -1,4 +1,9 @@
 <?php
+
+/**
+ * Class Mrmage_CronProfileRunner_Model_Rewrite_Dataflow_Convert_Parser_Xml_Excel
+ * @author MrMage team <support@mrmage.com>
+ */
 class Mrmage_CronProfileRunner_Model_Rewrite_Dataflow_Convert_Parser_Xml_Excel extends
     Mage_Dataflow_Model_Convert_Parser_Xml_Excel
 {

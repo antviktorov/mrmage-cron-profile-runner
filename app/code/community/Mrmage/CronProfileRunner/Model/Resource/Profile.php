@@ -1,6 +1,7 @@
 <?php
 /**
  * Class Mrmage_CronProfileRunner_Model_Resource_Profile
+ * @author MrMage team <support@mrmage.com>
  */
 class Mrmage_CronProfileRunner_Model_Resource_Profile extends Mage_Core_Model_Resource_Db_Abstract
 {

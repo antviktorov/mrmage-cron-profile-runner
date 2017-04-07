@@ -2,6 +2,7 @@
 
 /**
  * Class Mrmage_CronProfileRunner_Model_Rewrite_Dataflow_Convert_Parser_Csv
+ * @author MrMage team <support@mrmage.com>
  */
 class Mrmage_CronProfileRunner_Model_Rewrite_Dataflow_Convert_Parser_Csv extends Mage_Dataflow_Model_Convert_Parser_Csv
 {
