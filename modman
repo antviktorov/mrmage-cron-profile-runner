@@ -1,3 +1,4 @@
-app/code/community/Mrmage/CronProfileRunner  app/code/community/Mrmage/CronProfileRunner
-app/etc/modules/Mrmage_CronProfileRunner.xml app/etc/modules/Mrmage_CronProfileRunner.xml
-shell/dataflowprofile.php                    shell/dataflowprofile.php
+app/code/community/Mrmage/CronProfileRunner                app/code/community/Mrmage/CronProfileRunner
+app/etc/modules/Mrmage_CronProfileRunner.xml               app/etc/modules/Mrmage_CronProfileRunner.xml
+shell/dataflowprofile.php                                  shell/dataflowprofile.php
+app/design/frontend/base/default/template/mrmagecronrunner app/design/frontend/base/default/template/mrmagecronrunner

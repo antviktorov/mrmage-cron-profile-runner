@@ -13,6 +13,7 @@ class Mage_Shell_Dataflowprofile extends Mage_Shell_Abstract
     public function run()
     {
         if ($this->getArg('profile')) {
+            Mage::app()->getLayout()->setDirectOutput(true);
             try {
                 $id = (int) $this->getArg('profile');
 
@@ -24,17 +25,20 @@ class Mage_Shell_Dataflowprofile extends Mage_Shell_Abstract
                 $profile->setStatus(Mrmage_CronProfileRunner_Model_Profile::STATUS_PROFILE_RUNNING);
                 $profile->save();
 
-                echo "Batch model id " . $this->_runProfile($id) . " has executed\n";
+                $this->_showMessage("Batch model id " . $this->_runProfile($id) . " has executed");
 
                 $profile->setStatus(Mrmage_CronProfileRunner_Model_Profile::STATUS_PROFILE_STOPPED);
                 $profile->save();
             } catch (Exception $e) {
-                echo "Error while executing" . $e->getMessage() . "\n";
+                $this->_showMessage("Error while executing" . $e->getMessage());
+
                 $profile->setStatus(Mrmage_CronProfileRunner_Model_Profile::STATUS_PROFILE_ERROR);
                 $profile->save();
             }
         } else {
-            echo 'Please specify profile parameter with value of profile id ex. "php dataflowprofile.php --profile id"' . "\n";
+            $this->_showMessage(
+                'Please specify profile parameter with value of profile id ex. "php dataflowprofile.php --profile id"'
+            );
         }
     }
 
@@ -49,10 +53,21 @@ class Mage_Shell_Dataflowprofile extends Mage_Shell_Abstract
         $batchId  = $helper->run($id);
         $messages = $helper->getMessages();
         if (!empty($messages)) {
-            echo $messages;
+            $this->_showMessage($messages);
         }
 
         return $batchId;
+    }
+
+    /**
+     * @param $message
+     */
+    protected function _showMessage($message)
+    {
+        $echo = Mage::app()->getLayout()->createBlock('core/template')
+            ->setTemplate('mrmagecronrunner/message.phtml')
+            ->setMessage($message);
+        $echo->toHtml();
     }
 }
 
