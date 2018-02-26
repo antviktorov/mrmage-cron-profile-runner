@@ -40,6 +40,14 @@ class Mrmage_CronProfileRunner_Helper_Dataflow extends Mage_Core_Helper_Abstract
      */
     public function run($profileId)
     {
+        /**
+         * Clean import system cache each global run.
+         */
+        Mage::app()->getCache()->clean(
+            Zend_Cache::CLEANING_MODE_MATCHING_TAG,
+            array('mrmage_import_tags')
+        );
+
         Mage::app()->setCurrentStore(Mage_Core_Model_App::ADMIN_STORE_ID);
 
         $profile = Mage::getModel('dataflow/profile');
