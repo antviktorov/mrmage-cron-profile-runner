@@ -34,12 +34,15 @@ class Mrmage_CronProfileRunner_Model_Rewrite_Dataflow_Convert_Parser_Xml_Excel e
     public function parse()
     {
         /**
-         * Run import while shell or cron executions
+         * Run default import from admin
          */
-        if (Mage::app()->getRequest()->isAjax()) {
+        if (Mage::app()->getRequest()->getControllerName() == 'system_convert_profile') {
             return parent::parse();
         }
 
+        /**
+         * Run import while shell or cron executions
+         */
         parent::parse();
 
         /**
