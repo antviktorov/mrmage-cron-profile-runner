@@ -6,7 +6,7 @@
  *
  * This source file is subject MrMage
  * that is available through the world-wide-web at this URL:
- * http://mrmage.com/LICENSE-1.0.html
+ * https://mrmage.com/eula/
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
  * to support@mrmage.com so we can send you a copy immediately.
@@ -18,7 +18,7 @@
  * needs please refer to http://mrmage.com/ for more information.
  *
  * @copyright  Copyright (c) 2016-2018 MrMage company
- * @license    http://mrmage.com/LICENSE-1.0.html
+ * @license    https://mrmage.com/eula/
  */
 /**
  * Class Mrmage_CronProfileRunner_Model_Resource_Log_Collection
