@@ -32,10 +32,12 @@ class Mrmage_CronProfileRunner_Model_Rewrite_Dataflow_Convert_Parser_Csv extends
      */
     public function parse()
     {
+        $controllerName = Mage::app()->getRequest()->getControllerName();
+
         /**
          * Run default import from admin
          */
-        if (Mage::app()->getRequest()->getControllerName() == 'system_convert_profile') {
+        if ( $controllerName == 'system_convert_profile' || $controllerName == 'system_convert_gui') {
             return parent::parse();
         }
 

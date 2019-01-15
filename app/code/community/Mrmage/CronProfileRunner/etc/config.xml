@@ -25,7 +25,7 @@
 <config>
     <modules>
         <Mrmage_CronProfileRunner>
-            <version>1.0.5</version>
+            <version>1.0.6</version>
         </Mrmage_CronProfileRunner>
     </modules>
     <global>
